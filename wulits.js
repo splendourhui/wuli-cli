@@ -19,7 +19,7 @@ switch (type) {
       console.log(`Create directory ${name}`);
 
       /** index.tsx */
-      fs.writeFile(path.join(__dirname, `${name}/index.tsx`),
+      fs.writeFile(`./${name}/index.tsx`,
         templates.container.index.replace(/\$name/g, name), err => {
           if (err) {
             return console.log(err);
@@ -28,7 +28,7 @@ switch (type) {
         });
 
       /** style.less */
-      fs.writeFile(path.join(__dirname, `${name}/style.less`),
+      fs.writeFile(`./${name}/style.less`,
         templates.container.style.replace(/\$className/g, className), err => {
           if (err) {
             return console.log(err);
@@ -37,7 +37,7 @@ switch (type) {
         });
 
       /** component.tsx */
-      fs.writeFile(path.join(__dirname, `${name}/${name}.component.tsx`),
+      fs.writeFile(`./${name}/${name}.component.tsx`,
         templates.container.component.replace(/\$className/g, className).replace(/\$name/g, name), err => {
           if (err) {
             return console.log(err);
@@ -46,7 +46,7 @@ switch (type) {
         });
 
       /** selector.tsx */
-      fs.writeFile(path.join(__dirname, `${name}/${name}.selector.tsx`),
+      fs.writeFile(`./${name}/${name}.selector.tsx`,
         templates.container.selector.replace(/\$name/g, name), err => {
           if (err) {
             return console.log(err);
@@ -55,7 +55,7 @@ switch (type) {
         });
 
       /** decorator.tsx */
-      fs.writeFile(path.join(__dirname, `${name}/${name}.decorator.tsx`),
+      fs.writeFile(`./${name}/${name}.decorator.tsx`,
         templates.container.decorator.replace(/\$name/g, name), err => {
           if (err) {
             return console.log(err);

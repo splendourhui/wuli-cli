@@ -14,7 +14,7 @@ export default inject$name($name);`,
 
   component: `import * as React from 'react';
 
-import 'style.less';  
+import './style.less';
 
 export const $name = ({
 
@@ -30,7 +30,7 @@ export const $name = ({
 
 import {
 
-} from './$name.selector';  
+} from './$name.selector';
 
 export const inject$name = Wrapper => {
 
